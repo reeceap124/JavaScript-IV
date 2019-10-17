@@ -56,3 +56,66 @@ class PM extends Instructor {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`);
     }
 }
+//End classes
+
+const bill = new Instructor({
+    name: 'Bill',
+    age: 35,
+    location: 'Earth',
+    specialty: 'Web Dev',
+    favLanguage: 'Python',
+    catchPhrase: 'KaChow'
+});
+
+const phil = new Instructor({
+    name: 'Phil',
+    age: 28,
+    location: 'The Amazon',
+    specialty: 'Dev Web',
+    favLanguage: 'Gibberish',
+    catchPhrase: 'ChowKa'
+});
+
+const jill = new Student ({
+    name: 'Jill',
+    age: 21,
+    location: 'Westeros',
+    previousBackground: 'none',
+    className: 'Web25',
+    favSubjects: ['HTML', 'CSS', 'JavaScript']
+})
+
+const gill = new Student ({
+    name: 'Gill',
+    age: 43,
+    location: 'Rural Montana',
+    previousBackground: 'Highly Wanted Hacker',
+    className: 'Web 32',
+    favSubjects: ['Advanced JavaScript', 'Node.js', 'LambdaX']
+});
+
+const dill = new PM ({
+    name: 'Dill',
+    age: 17,
+    location: `Don't worry about it`,
+    gradClassName: 'Web23',
+    favInstructor: `Bryan`
+});
+
+const syle = new PM ({
+    name: 'Syle',
+    age: 38,
+    location: 'ISS',
+    gradClassName: 'Web22',
+    favInstructor: 'Brit'
+});
+
+console.log(dill.name);
+console.log(gill.name);
+console.log(bill.demo('advanced physics'));
+console.log(phil.grade(jill, 'javascript'));
+dill.standUp('web_26_dill');
+syle.debugsCode(jill, 'ethical hacking');
+jill.listsSubjects();
+console.log(gill.sprintChallenge('React'));
+console.log(phil.speak());
