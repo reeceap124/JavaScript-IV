@@ -33,12 +33,26 @@ class Student extends Person{
         this.favSubjects = attrs.favSubjects;
     }
     listsSubjects(){  //need to work out the logging part
-        return `I like ${this.favSubjects}.`;
+        this.favSubjects.forEach(subject => console.log(subject));
     }
     PRAssignment(subject){
         return `${this.name} had submitted a PR for ${subject}.`;
     }
     sprintChallenge(subject){
-        return `${this.name} has begun spring challeng on ${subject}.`
+        return `${this.name} has begun spring challeng on ${subject}.`;
+    }
+}
+
+class PM extends Instructor {
+    constructor(attrs){
+        super(attrs);
+        this.gradClassName = attrs.gradClassName;
+        this.favInstructor = attrs.favInstructor;
+    }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @${channel} standy times!`);
+    }
+    debugsCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`);
     }
 }
